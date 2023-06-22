@@ -1,3 +1,4 @@
+import os
 palavrasecreta = 'carro'
 caracter = '*'
 letrasacertadas = ''
@@ -32,6 +33,7 @@ while True:
         palavraacertada = ''
         letrasacertadas = ''
         contador = 0
+        os.system('cls')
         print('Jogo reiniciado')
 
     if contador >= 10:
@@ -40,4 +42,5 @@ while True:
         palavraacertada = ''
         letrasacertadas = ''
         contador = 0
+        os.system('cls')
         continue
