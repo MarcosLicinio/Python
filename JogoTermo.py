@@ -4,11 +4,16 @@ letrasacertadas = ''
 contador = 0
 opcoesescolhidas = ''
 lista = ['carro', 'casa', 'boneca', 'perfume', 'janela', 'sofá', 'montanha', 'nuvem', 'cavalo', 'mesa']
+tamanho_lista = len(lista)
 
 while True: 
 
     print('- - Bem vindo ao jogo TERMO versão Pythoresca - -')
     opcao_escolhida = input('Digite de 1 a 10 para escolher uma palavra secreta: ')
+   
+    if int(opcao_escolhida) > tamanho_lista or int(opcao_escolhida) < (tamanho_lista - 10):
+        print('Você digitou uma opção errada')
+        continue
 
     if opcao_escolhida in opcoesescolhidas:
         print('Você já escolheu esta palavra')
