@@ -52,10 +52,13 @@ for linha in cnpj:
     pyautogui.hotkey("alt", "tab")
     time.sleep(2)
     print("Mudando de aba")
-    pyautogui.write("A nome da empresa do CNPJ: ")
+    frase = "O nome da empresa do CNPJ: "
+    pyautogui.write(frase)
+    print(frase)
     time.sleep(1)
     print("Escrevendo")
     pyautogui.write(linha)
+    pyautogui.write(" é: ")
     time.sleep(1)
     pyautogui.hotkey("ctrl", "v")
     time.sleep(1)
@@ -66,6 +69,7 @@ for linha in cnpj:
     pyautogui.hotkey("alt", "tab")
     pyautogui.press("tab")
     pyautogui.press("tab")
+    pyautogui.press("enter")
     print("Volta e cola o proximo CNPJ da lista")
 
 
